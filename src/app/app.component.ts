@@ -46,14 +46,6 @@ export class AppComponent implements OnDestroy {
       .subscribe(({el, target, source, sourceModel, targetModel, item}) => {
         item.img = 'assets/images/' + target.id + '.png';
         item.ownerName = target.id.charAt(0).toUpperCase() + target.id.slice(1);
-        console.log('dropModel:');
-        console.log(el);
-        console.log(source);
-        console.log(target);
-        console.log(sourceModel);
-        console.log(targetModel);
-        console.log(item);
-
       })
     );
   }
