@@ -1,0 +1,70 @@
+.container {
+  display: table-cell;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 25%;
+  border: 1px solid #aaaaaa;
+  padding: 5px;
+}
+
+.container:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 5px;
+  min-width: 55px;
+  color: black;
+  border: 1px solid darkblue;
+  background-color: rgba(249, 249, 249, 0.55);
+  border-radius: 5px;
+  height: 120px;
+  width: 150px;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  margin: 5px;
+}
+
+.card:hover {
+  color: red;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  border: none;
+  outline: none;
+  box-shadow: 3px 1px 8px 5px lightblue;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+/* in-flight clone */
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  pointer-events: none;
+}
+
+/* high-performance display:none; helper */
+.gu-hide {
+  left: -9999px !important;
+}
+
+/* added to mirrorContainer (default = body) while dragging */
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+/* added to the source element while its mirror is dragged */
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
